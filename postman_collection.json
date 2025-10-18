@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "dca64dbe-8806-4567-bd35-bb9f38fa34ca",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9374395"
+	},
+	"item": [
+		{
+			"name": "use App/Models/Food;\nuse Illuminate/Http/Request;",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"telegram_id\": 369147,\r\n  \"meal_name\": \"Lunch\",\r\n  \"calories\": 500\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/simulate/register-meal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"simulate",
+						"register-meal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/simulate/stats?telegram_id=123456",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/simulate/stats?telegram_id=123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"simulate",
+						"stats"
+					],
+					"query": [
+						{
+							"key": "telegram_id",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/simulate/daily-summary?telegram_id=123456",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/simulate/daily-summary?telegram_id=123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"simulate",
+						"daily-summary"
+					],
+					"query": [
+						{
+							"key": "telegram_id",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
